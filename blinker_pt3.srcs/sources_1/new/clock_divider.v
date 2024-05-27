@@ -22,7 +22,7 @@
 
 module clock_divider(
     input CLK_I,
-    output CLK_O
+    output reg CLK_O
     );
     reg[27:0] cnt=28'd0;
     parameter DIVISOR = 28'd2;
