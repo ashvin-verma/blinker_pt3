@@ -3,8 +3,8 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Mon May 27 20:02:54 2024
-# Process ID: 59856
+# Start of session at: Mon May 27 20:20:10 2024
+# Process ID: 7808
 # Current directory: D:/ashvi/fpga/blinker_pt3/blinker_pt3.runs/synth_1
 # Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: D:/ashvi/fpga/blinker_pt3/blinker_pt3.runs/synth_1/design_1_wrapper.vds
@@ -12,33 +12,38 @@
 # Running On: ashvin-ve, OS: Windows, CPU Frequency: 2208 MHz, CPU Physical cores: 6, Host memory: 25604 MB
 #-----------------------------------------------------------
 source design_1_wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 472.320 ; gain = 178.586
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 473.512 ; gain = 180.500
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/XILINX/Vivado/2023.2/data/ip'.
+Command: read_checkpoint -auto_incremental -incremental D:/ashvi/fpga/blinker_pt3/blinker_pt3.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from D:/ashvi/fpga/blinker_pt3/blinker_pt3.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top design_1_wrapper -part xc7z020clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 57304
+INFO: [Synth 8-7075] Helper process launched with PID 96892
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1353.242 ; gain = 438.227
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1358.543 ; gain = 440.645
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [d:/ashvi/fpga/blinker_pt3/blinker_pt3.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:13]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [d:/ashvi/fpga/blinker_pt3/blinker_pt3.gen/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_1_clock_divider_0_0' [D:/ashvi/fpga/blinker_pt3/blinker_pt3.runs/synth_1/.Xil/Vivado-59856-ashvin-ve/realtime/design_1_clock_divider_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_clock_divider_0_0' (0#1) [D:/ashvi/fpga/blinker_pt3/blinker_pt3.runs/synth_1/.Xil/Vivado-59856-ashvin-ve/realtime/design_1_clock_divider_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_clock_divider_1_0' [D:/ashvi/fpga/blinker_pt3/blinker_pt3.runs/synth_1/.Xil/Vivado-59856-ashvin-ve/realtime/design_1_clock_divider_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_clock_divider_1_0' (0#1) [D:/ashvi/fpga/blinker_pt3/blinker_pt3.runs/synth_1/.Xil/Vivado-59856-ashvin-ve/realtime/design_1_clock_divider_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_clock_divider_2_0' [D:/ashvi/fpga/blinker_pt3/blinker_pt3.runs/synth_1/.Xil/Vivado-59856-ashvin-ve/realtime/design_1_clock_divider_2_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_clock_divider_2_0' (0#1) [D:/ashvi/fpga/blinker_pt3/blinker_pt3.runs/synth_1/.Xil/Vivado-59856-ashvin-ve/realtime/design_1_clock_divider_2_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_clock_divider_3_0' [D:/ashvi/fpga/blinker_pt3/blinker_pt3.runs/synth_1/.Xil/Vivado-59856-ashvin-ve/realtime/design_1_clock_divider_3_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_clock_divider_3_0' (0#1) [D:/ashvi/fpga/blinker_pt3/blinker_pt3.runs/synth_1/.Xil/Vivado-59856-ashvin-ve/realtime/design_1_clock_divider_3_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [D:/ashvi/fpga/blinker_pt3/blinker_pt3.runs/synth_1/.Xil/Vivado-59856-ashvin-ve/realtime/design_1_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (0#1) [D:/ashvi/fpga/blinker_pt3/blinker_pt3.runs/synth_1/.Xil/Vivado-59856-ashvin-ve/realtime/design_1_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_clock_divider_0_0' [D:/ashvi/fpga/blinker_pt3/blinker_pt3.runs/synth_1/.Xil/Vivado-7808-ashvin-ve/realtime/design_1_clock_divider_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_clock_divider_0_0' (0#1) [D:/ashvi/fpga/blinker_pt3/blinker_pt3.runs/synth_1/.Xil/Vivado-7808-ashvin-ve/realtime/design_1_clock_divider_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_clock_divider_1_0' [D:/ashvi/fpga/blinker_pt3/blinker_pt3.runs/synth_1/.Xil/Vivado-7808-ashvin-ve/realtime/design_1_clock_divider_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_clock_divider_1_0' (0#1) [D:/ashvi/fpga/blinker_pt3/blinker_pt3.runs/synth_1/.Xil/Vivado-7808-ashvin-ve/realtime/design_1_clock_divider_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_clock_divider_2_0' [D:/ashvi/fpga/blinker_pt3/blinker_pt3.runs/synth_1/.Xil/Vivado-7808-ashvin-ve/realtime/design_1_clock_divider_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_clock_divider_2_0' (0#1) [D:/ashvi/fpga/blinker_pt3/blinker_pt3.runs/synth_1/.Xil/Vivado-7808-ashvin-ve/realtime/design_1_clock_divider_2_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_clock_divider_3_0' [D:/ashvi/fpga/blinker_pt3/blinker_pt3.runs/synth_1/.Xil/Vivado-7808-ashvin-ve/realtime/design_1_clock_divider_3_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_clock_divider_3_0' (0#1) [D:/ashvi/fpga/blinker_pt3/blinker_pt3.runs/synth_1/.Xil/Vivado-7808-ashvin-ve/realtime/design_1_clock_divider_3_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [D:/ashvi/fpga/blinker_pt3/blinker_pt3.runs/synth_1/.Xil/Vivado-7808-ashvin-ve/realtime/design_1_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (0#1) [D:/ashvi/fpga/blinker_pt3/blinker_pt3.runs/synth_1/.Xil/Vivado-7808-ashvin-ve/realtime/design_1_processing_system7_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/ashvi/fpga/blinker_pt3/blinker_pt3.gen/sources_1/bd/design_1/synth/design_1.v:113]
 WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/ashvi/fpga/blinker_pt3/blinker_pt3.gen/sources_1/bd/design_1/synth/design_1.v:113]
 WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARVALID' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/ashvi/fpga/blinker_pt3/blinker_pt3.gen/sources_1/bd/design_1/synth/design_1.v:113]
@@ -73,18 +78,18 @@ WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_1_proc
 INFO: [Synth 8-6155] done synthesizing module 'design_1' (0#1) [d:/ashvi/fpga/blinker_pt3/blinker_pt3.gen/sources_1/bd/design_1/synth/design_1.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (0#1) [d:/ashvi/fpga/blinker_pt3/blinker_pt3.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:13]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1460.793 ; gain = 545.777
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1464.707 ; gain = 546.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1460.793 ; gain = 545.777
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1464.707 ; gain = 546.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1460.793 ; gain = 545.777
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1464.707 ; gain = 546.809
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1460.793 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1464.707 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -99,24 +104,30 @@ Parsing XDC File [d:/ashvi/fpga/blinker_pt3/blinker_pt3.gen/sources_1/bd/design_
 Finished Parsing XDC File [d:/ashvi/fpga/blinker_pt3/blinker_pt3.gen/sources_1/bd/design_1/ip/design_1_clock_divider_3_0/design_1_clock_divider_3_0/design_1_clock_divider_3_0_in_context.xdc] for cell 'design_1_i/clock_divider_3'
 Parsing XDC File [d:/ashvi/fpga/blinker_pt3/blinker_pt3.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc] for cell 'design_1_i/processing_system7_0'
 Finished Parsing XDC File [d:/ashvi/fpga/blinker_pt3/blinker_pt3.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc] for cell 'design_1_i/processing_system7_0'
+Parsing XDC File [D:/ashvi/fpga/blinker_pt3/blinker_pt3.srcs/constrs_1/new/Constraints.xdc]
+Finished Parsing XDC File [D:/ashvi/fpga/blinker_pt3/blinker_pt3.srcs/constrs_1/new/Constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/ashvi/fpga/blinker_pt3/blinker_pt3.srcs/constrs_1/new/Constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [D:/ashvi/fpga/blinker_pt3/blinker_pt3.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [D:/ashvi/fpga/blinker_pt3/blinker_pt3.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1474.055 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1477.824 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1474.055 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1477.824 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1474.055 ; gain = 559.039
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1477.824 ; gain = 559.926
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1474.055 ; gain = 559.039
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1477.824 ; gain = 559.926
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -388,10 +399,10 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/clock_divider_2. (cons
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/clock_divider_3. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/processing_system7_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1474.055 ; gain = 559.039
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1477.824 ; gain = 559.926
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1474.055 ; gain = 559.039
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1477.824 ; gain = 559.926
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -414,25 +425,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1474.055 ; gain = 559.039
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1477.824 ; gain = 559.926
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1474.055 ; gain = 559.039
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1477.824 ; gain = 559.926
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1474.055 ; gain = 559.039
+Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1477.824 ; gain = 559.926
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1474.055 ; gain = 559.039
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1477.824 ; gain = 559.926
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -450,37 +461,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 1474.055 ; gain = 559.039
+Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1477.824 ; gain = 559.926
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 1474.055 ; gain = 559.039
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1477.824 ; gain = 559.926
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 1474.055 ; gain = 559.039
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1477.824 ; gain = 559.926
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 1474.055 ; gain = 559.039
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1477.824 ; gain = 559.926
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 1474.055 ; gain = 559.039
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1477.824 ; gain = 559.926
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 1474.055 ; gain = 559.039
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1477.824 ; gain = 559.926
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -510,25 +521,25 @@ Report Cell Usage:
 |7     |OBUF                          |     4|
 +------+------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 1474.055 ; gain = 559.039
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1477.824 ; gain = 559.926
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:42 . Memory (MB): peak = 1474.055 ; gain = 545.777
-Synthesis Optimization Complete : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 1474.055 ; gain = 559.039
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:39 . Memory (MB): peak = 1477.824 ; gain = 546.809
+Synthesis Optimization Complete : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1477.824 ; gain = 559.926
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1485.465 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1489.238 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1490.090 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1494.066 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 Synth Design complete | Checksum: 88f7073f
 INFO: [Common 17-83] Releasing license: Synthesis
-29 Infos, 32 Warnings, 0 Critical Warnings and 0 Errors encountered.
+36 Infos, 32 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 1490.090 ; gain = 999.910
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1490.090 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 1494.066 ; gain = 998.137
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1494.066 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'D:/ashvi/fpga/blinker_pt3/blinker_pt3.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon May 27 20:04:06 2024...
+INFO: [Common 17-206] Exiting Vivado at Mon May 27 20:21:16 2024...
