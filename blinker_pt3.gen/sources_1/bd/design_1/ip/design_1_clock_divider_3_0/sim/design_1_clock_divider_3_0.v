@@ -63,7 +63,7 @@ input wire CLK_I;
 output wire CLK_O;
 
   clock_divider #(
-    .DIVISOR(28'H0EE6B28)
+    .DIVISOR(28'H03B9ACA)
   ) inst (
     .CLK_I(CLK_I),
     .CLK_O(CLK_O)

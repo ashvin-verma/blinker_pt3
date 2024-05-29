@@ -89,7 +89,7 @@ set_property ip_output_repo d:/ashvi/fpga/blinker_pt3/blinker_pt3.cache/ip [curr
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib d:/ashvi/fpga/blinker_pt3/blinker_pt3.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+read_verilog -library xil_defaultlib D:/ashvi/fpga/blinker_pt3/blinker_pt3.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
 add_files D:/ashvi/fpga/blinker_pt3/blinker_pt3.srcs/sources_1/bd/design_1/design_1.bd
 set_property used_in_implementation false [get_files -all d:/ashvi/fpga/blinker_pt3/blinker_pt3.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc]
 set_property used_in_implementation false [get_files -all d:/ashvi/fpga/blinker_pt3/blinker_pt3.gen/sources_1/bd/design_1/design_1_ooc.xdc]

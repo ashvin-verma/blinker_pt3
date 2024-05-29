@@ -2,7 +2,7 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-// Date        : Mon May 27 20:02:35 2024
+// Date        : Wed May 29 13:52:04 2024
 // Host        : ashvin-ve running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               d:/ashvi/fpga/blinker_pt3/blinker_pt3.gen/sources_1/bd/design_1/ip/design_1_clock_divider_3_0/design_1_clock_divider_3_0_sim_netlist.v
@@ -43,18 +43,13 @@ module design_1_clock_divider_3_0_clock_divider
   wire CLK_O_i_3_n_0;
   wire CLK_O_i_4_n_0;
   wire CLK_O_i_5_n_0;
-  wire CLK_O_i_6_n_0;
-  wire CLK_O_i_7_n_0;
-  wire \cnt[0]_i_10_n_0 ;
   wire \cnt[0]_i_1_n_0 ;
   wire \cnt[0]_i_3_n_0 ;
   wire \cnt[0]_i_4_n_0 ;
   wire \cnt[0]_i_5_n_0 ;
   wire \cnt[0]_i_6_n_0 ;
   wire \cnt[0]_i_7_n_0 ;
-  wire \cnt[0]_i_8_n_0 ;
-  wire \cnt[0]_i_9_n_0 ;
-  wire [23:0]cnt_reg;
+  wire [21:0]cnt_reg;
   wire \cnt_reg[0]_i_2_n_0 ;
   wire \cnt_reg[0]_i_2_n_1 ;
   wire \cnt_reg[0]_i_2_n_2 ;
@@ -79,11 +74,7 @@ module design_1_clock_divider_3_0_clock_divider
   wire \cnt_reg[16]_i_1_n_5 ;
   wire \cnt_reg[16]_i_1_n_6 ;
   wire \cnt_reg[16]_i_1_n_7 ;
-  wire \cnt_reg[20]_i_1_n_1 ;
-  wire \cnt_reg[20]_i_1_n_2 ;
   wire \cnt_reg[20]_i_1_n_3 ;
-  wire \cnt_reg[20]_i_1_n_4 ;
-  wire \cnt_reg[20]_i_1_n_5 ;
   wire \cnt_reg[20]_i_1_n_6 ;
   wire \cnt_reg[20]_i_1_n_7 ;
   wire \cnt_reg[4]_i_1_n_0 ;
@@ -103,68 +94,56 @@ module design_1_clock_divider_3_0_clock_divider
   wire \cnt_reg[8]_i_1_n_6 ;
   wire \cnt_reg[8]_i_1_n_7 ;
   wire p_0_in;
-  wire [3:3]\NLW_cnt_reg[20]_i_1_CO_UNCONNECTED ;
+  wire [3:1]\NLW_cnt_reg[20]_i_1_CO_UNCONNECTED ;
+  wire [3:2]\NLW_cnt_reg[20]_i_1_O_UNCONNECTED ;
 
   LUT6 #(
-    .INIT(64'h00000000FFFF00F8)) 
+    .INIT(64'h000000007F7FFF7F)) 
     CLK_O_i_1
-       (.I0(CLK_O_i_2_n_0),
-        .I1(CLK_O_i_3_n_0),
-        .I2(CLK_O_i_4_n_0),
-        .I3(cnt_reg[19]),
-        .I4(CLK_O_i_5_n_0),
-        .I5(cnt_reg[23]),
+       (.I0(cnt_reg[18]),
+        .I1(cnt_reg[20]),
+        .I2(cnt_reg[19]),
+        .I3(CLK_O_i_2_n_0),
+        .I4(cnt_reg[17]),
+        .I5(cnt_reg[21]),
         .O(p_0_in));
-  LUT2 #(
-    .INIT(4'h1)) 
+  LUT6 #(
+    .INIT(64'h10111111FFFFFFFF)) 
     CLK_O_i_2
-       (.I0(cnt_reg[14]),
-        .I1(cnt_reg[15]),
+       (.I0(cnt_reg[12]),
+        .I1(cnt_reg[13]),
+        .I2(CLK_O_i_3_n_0),
+        .I3(cnt_reg[11]),
+        .I4(cnt_reg[10]),
+        .I5(CLK_O_i_4_n_0),
         .O(CLK_O_i_2_n_0));
   LUT6 #(
-    .INIT(64'hAAAAAAAAAAAAFFBF)) 
+    .INIT(64'h000000005555FF7F)) 
     CLK_O_i_3
-       (.I0(CLK_O_i_6_n_0),
-        .I1(cnt_reg[8]),
-        .I2(cnt_reg[7]),
-        .I3(CLK_O_i_7_n_0),
-        .I4(cnt_reg[11]),
+       (.I0(cnt_reg[8]),
+        .I1(cnt_reg[5]),
+        .I2(cnt_reg[6]),
+        .I3(CLK_O_i_5_n_0),
+        .I4(cnt_reg[7]),
         .I5(cnt_reg[9]),
         .O(CLK_O_i_3_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT3 #(
-    .INIT(8'h7F)) 
-    CLK_O_i_4
-       (.I0(cnt_reg[18]),
-        .I1(cnt_reg[17]),
-        .I2(cnt_reg[16]),
-        .O(CLK_O_i_4_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT3 #(
-    .INIT(8'h7F)) 
-    CLK_O_i_5
-       (.I0(cnt_reg[22]),
-        .I1(cnt_reg[21]),
-        .I2(cnt_reg[20]),
-        .O(CLK_O_i_5_n_0));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT4 #(
-    .INIT(16'h777F)) 
-    CLK_O_i_6
-       (.I0(cnt_reg[13]),
-        .I1(cnt_reg[12]),
-        .I2(cnt_reg[10]),
-        .I3(cnt_reg[11]),
-        .O(CLK_O_i_6_n_0));
+  LUT3 #(
+    .INIT(8'h80)) 
+    CLK_O_i_4
+       (.I0(cnt_reg[14]),
+        .I1(cnt_reg[16]),
+        .I2(cnt_reg[15]),
+        .O(CLK_O_i_4_n_0));
   LUT5 #(
-    .INIT(32'h01010111)) 
-    CLK_O_i_7
-       (.I0(cnt_reg[6]),
-        .I1(cnt_reg[5]),
-        .I2(cnt_reg[4]),
-        .I3(cnt_reg[3]),
-        .I4(cnt_reg[2]),
-        .O(CLK_O_i_7_n_0));
+    .INIT(32'h00000057)) 
+    CLK_O_i_5
+       (.I0(cnt_reg[2]),
+        .I1(cnt_reg[1]),
+        .I2(cnt_reg[0]),
+        .I3(cnt_reg[4]),
+        .I4(cnt_reg[3]),
+        .O(CLK_O_i_5_n_0));
   FDRE CLK_O_reg
        (.C(CLK_I),
         .CE(1'b1),
@@ -172,77 +151,57 @@ module design_1_clock_divider_3_0_clock_divider
         .Q(CLK_O),
         .R(1'b0));
   LUT6 #(
-    .INIT(64'hA8A8A8A8A8A8A888)) 
+    .INIT(64'h8088808000000000)) 
     \cnt[0]_i_1 
-       (.I0(\cnt[0]_i_3_n_0 ),
-        .I1(cnt_reg[20]),
-        .I2(\cnt[0]_i_4_n_0 ),
-        .I3(\cnt[0]_i_5_n_0 ),
-        .I4(cnt_reg[15]),
-        .I5(cnt_reg[16]),
+       (.I0(cnt_reg[20]),
+        .I1(cnt_reg[19]),
+        .I2(cnt_reg[18]),
+        .I3(\cnt[0]_i_3_n_0 ),
+        .I4(\cnt[0]_i_4_n_0 ),
+        .I5(cnt_reg[21]),
         .O(\cnt[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT3 #(
-    .INIT(8'hF8)) 
-    \cnt[0]_i_10 
-       (.I0(cnt_reg[10]),
-        .I1(cnt_reg[11]),
-        .I2(cnt_reg[12]),
-        .O(\cnt[0]_i_10_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT3 #(
-    .INIT(8'h80)) 
-    \cnt[0]_i_3 
-       (.I0(cnt_reg[23]),
-        .I1(cnt_reg[22]),
-        .I2(cnt_reg[21]),
-        .O(\cnt[0]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT3 #(
-    .INIT(8'h80)) 
-    \cnt[0]_i_4 
-       (.I0(cnt_reg[19]),
-        .I1(cnt_reg[18]),
-        .I2(cnt_reg[17]),
-        .O(\cnt[0]_i_4_n_0 ));
   LUT6 #(
-    .INIT(64'h8888888880808000)) 
-    \cnt[0]_i_5 
-       (.I0(cnt_reg[14]),
-        .I1(cnt_reg[13]),
-        .I2(\cnt[0]_i_7_n_0 ),
-        .I3(\cnt[0]_i_8_n_0 ),
-        .I4(\cnt[0]_i_9_n_0 ),
-        .I5(\cnt[0]_i_10_n_0 ),
-        .O(\cnt[0]_i_5_n_0 ));
+    .INIT(64'h5555555557777777)) 
+    \cnt[0]_i_3 
+       (.I0(cnt_reg[17]),
+        .I1(cnt_reg[14]),
+        .I2(cnt_reg[12]),
+        .I3(\cnt[0]_i_6_n_0 ),
+        .I4(cnt_reg[11]),
+        .I5(cnt_reg[13]),
+        .O(\cnt[0]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    \cnt[0]_i_4 
+       (.I0(cnt_reg[15]),
+        .I1(cnt_reg[16]),
+        .O(\cnt[0]_i_4_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
-    \cnt[0]_i_6 
+    \cnt[0]_i_5 
        (.I0(cnt_reg[0]),
-        .O(\cnt[0]_i_6_n_0 ));
-  LUT3 #(
-    .INIT(8'h80)) 
-    \cnt[0]_i_7 
-       (.I0(cnt_reg[9]),
-        .I1(cnt_reg[8]),
-        .I2(cnt_reg[11]),
-        .O(\cnt[0]_i_7_n_0 ));
+        .O(\cnt[0]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'hAAAAAAAAAAAA8000)) 
-    \cnt[0]_i_8 
-       (.I0(cnt_reg[5]),
-        .I1(cnt_reg[2]),
-        .I2(cnt_reg[1]),
+    .INIT(64'hFEEEEEEEAAAAAAAA)) 
+    \cnt[0]_i_6 
+       (.I0(cnt_reg[10]),
+        .I1(cnt_reg[8]),
+        .I2(cnt_reg[7]),
+        .I3(\cnt[0]_i_7_n_0 ),
+        .I4(cnt_reg[6]),
+        .I5(cnt_reg[9]),
+        .O(\cnt[0]_i_6_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFEEEEEEEA)) 
+    \cnt[0]_i_7 
+       (.I0(cnt_reg[4]),
+        .I1(cnt_reg[3]),
+        .I2(cnt_reg[2]),
         .I3(cnt_reg[0]),
-        .I4(cnt_reg[3]),
-        .I5(cnt_reg[4]),
-        .O(\cnt[0]_i_8_n_0 ));
-  LUT2 #(
-    .INIT(4'hE)) 
-    \cnt[0]_i_9 
-       (.I0(cnt_reg[6]),
-        .I1(cnt_reg[7]),
-        .O(\cnt[0]_i_9_n_0 ));
+        .I4(cnt_reg[1]),
+        .I5(cnt_reg[5]),
+        .O(\cnt[0]_i_7_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \cnt_reg[0] 
@@ -258,7 +217,7 @@ module design_1_clock_divider_3_0_clock_divider
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b1}),
         .O({\cnt_reg[0]_i_2_n_4 ,\cnt_reg[0]_i_2_n_5 ,\cnt_reg[0]_i_2_n_6 ,\cnt_reg[0]_i_2_n_7 }),
-        .S({cnt_reg[3:1],\cnt[0]_i_6_n_0 }));
+        .S({cnt_reg[3:1],\cnt[0]_i_5_n_0 }));
   FDRE #(
     .INIT(1'b0)) 
     \cnt_reg[10] 
@@ -374,11 +333,11 @@ module design_1_clock_divider_3_0_clock_divider
   (* ADDER_THRESHOLD = "11" *) 
   CARRY4 \cnt_reg[20]_i_1 
        (.CI(\cnt_reg[16]_i_1_n_0 ),
-        .CO({\NLW_cnt_reg[20]_i_1_CO_UNCONNECTED [3],\cnt_reg[20]_i_1_n_1 ,\cnt_reg[20]_i_1_n_2 ,\cnt_reg[20]_i_1_n_3 }),
+        .CO({\NLW_cnt_reg[20]_i_1_CO_UNCONNECTED [3:1],\cnt_reg[20]_i_1_n_3 }),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\cnt_reg[20]_i_1_n_4 ,\cnt_reg[20]_i_1_n_5 ,\cnt_reg[20]_i_1_n_6 ,\cnt_reg[20]_i_1_n_7 }),
-        .S(cnt_reg[23:20]));
+        .O({\NLW_cnt_reg[20]_i_1_O_UNCONNECTED [3:2],\cnt_reg[20]_i_1_n_6 ,\cnt_reg[20]_i_1_n_7 }),
+        .S({1'b0,1'b0,cnt_reg[21:20]}));
   FDRE #(
     .INIT(1'b0)) 
     \cnt_reg[21] 
@@ -386,22 +345,6 @@ module design_1_clock_divider_3_0_clock_divider
         .CE(1'b1),
         .D(\cnt_reg[20]_i_1_n_6 ),
         .Q(cnt_reg[21]),
-        .R(\cnt[0]_i_1_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \cnt_reg[22] 
-       (.C(CLK_I),
-        .CE(1'b1),
-        .D(\cnt_reg[20]_i_1_n_5 ),
-        .Q(cnt_reg[22]),
-        .R(\cnt[0]_i_1_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \cnt_reg[23] 
-       (.C(CLK_I),
-        .CE(1'b1),
-        .D(\cnt_reg[20]_i_1_n_4 ),
-        .Q(cnt_reg[23]),
         .R(\cnt[0]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 

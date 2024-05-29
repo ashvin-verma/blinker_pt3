@@ -2,10 +2,10 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-// Date        : Mon May 27 20:02:35 2024
+// Date        : Wed May 29 13:15:01 2024
 // Host        : ashvin-ve running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               d:/ashvi/fpga/blinker_pt3/blinker_pt3.gen/sources_1/bd/design_1/ip/design_1_clock_divider_1_0/design_1_clock_divider_1_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top design_1_clock_divider_1_0 -prefix
+//               design_1_clock_divider_1_0_ design_1_clock_divider_1_0_sim_netlist.v
 // Design      : design_1_clock_divider_1_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -13,24 +13,6 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "design_1_clock_divider_1_0,clock_divider,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "module_ref" *) 
-(* X_CORE_INFO = "clock_divider,Vivado 2023.2" *) 
-(* NotValidForBitStream *)
-module design_1_clock_divider_1_0
-   (CLK_I,
-    CLK_O);
-  input CLK_I;
-  output CLK_O;
-
-  wire CLK_I;
-  wire CLK_O;
-
-  design_1_clock_divider_1_0_clock_divider inst
-       (.CLK_I(CLK_I),
-        .CLK_O(CLK_O));
-endmodule
-
-(* ORIG_REF_NAME = "clock_divider" *) 
 module design_1_clock_divider_1_0_clock_divider
    (CLK_O,
     CLK_I);
@@ -476,6 +458,23 @@ module design_1_clock_divider_1_0_clock_divider
         .D(\cnt_reg[8]_i_1_n_6 ),
         .Q(cnt_reg[9]),
         .R(\cnt[0]_i_1_n_0 ));
+endmodule
+
+(* CHECK_LICENSE_TYPE = "design_1_clock_divider_1_0,clock_divider,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "module_ref" *) 
+(* X_CORE_INFO = "clock_divider,Vivado 2023.2" *) 
+(* NotValidForBitStream *)
+module design_1_clock_divider_1_0
+   (CLK_I,
+    CLK_O);
+  input CLK_I;
+  output CLK_O;
+
+  wire CLK_I;
+  wire CLK_O;
+
+  design_1_clock_divider_1_0_clock_divider inst
+       (.CLK_I(CLK_I),
+        .CLK_O(CLK_O));
 endmodule
 `ifndef GLBL
 `define GLBL

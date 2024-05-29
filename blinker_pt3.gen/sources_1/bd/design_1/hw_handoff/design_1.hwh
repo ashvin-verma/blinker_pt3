@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon May 27 19:55:59 2024" VIVADOVERSION="2023.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed May 29 13:50:51 2024" VIVADOVERSION="2023.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -77,7 +77,7 @@
         <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_RAS_n"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="IO" NAME="DDR_reset_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="processing_system7_0_DDR_DRSTB">
+    <PORT DIR="IO" NAME="DDR_reset_n" SIGIS="rst" SIGNAME="processing_system7_0_DDR_DRSTB">
       <CONNECTIONS>
         <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_DRSTB"/>
       </CONNECTIONS>
@@ -132,9 +132,9 @@
         <CONNECTION INSTANCE="clock_divider_2" PORT="CLK_O"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="LD3" SIGIS="undef" SIGNAME="clock_divider_3_CLK_O">
+    <PORT DIR="O" NAME="LD3" SIGIS="undef" SIGNAME="pwn_divider_0_CLK_O">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="clock_divider_3" PORT="CLK_O"/>
+        <CONNECTION INSTANCE="pwn_divider_0" PORT="CLK_O"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -253,7 +253,7 @@
     <MODULE COREREVISION="1" FULLNAME="/clock_divider_3" HWVERSION="1.0" INSTANCE="clock_divider_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clock_divider" VLNV="xilinx.com:module_ref:clock_divider:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="DIVISOR" VALUE="0x0EE6B28"/>
+        <PARAMETER NAME="DIVISOR" VALUE="0x03B9ACA"/>
         <PARAMETER NAME="Component_Name" VALUE="design_1_clock_divider_3_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -265,7 +265,7 @@
         </PORT>
         <PORT DIR="O" NAME="CLK_O" SIGIS="undef" SIGNAME="clock_divider_3_CLK_O">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="LD3"/>
+            <CONNECTION INSTANCE="pwn_divider_0" PORT="CLK_I"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1499,6 +1499,27 @@
       </BUSINTERFACES>
       <MEMORYMAP/>
       <PERIPHERALS/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/pwn_divider_0" HWVERSION="1.0" INSTANCE="pwn_divider_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="pwn_divider" VLNV="xilinx.com:module_ref:pwn_divider:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DIVISOR" VALUE="0x0000002"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_pwn_divider_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="CLK_I" SIGIS="undef" SIGNAME="clock_divider_3_CLK_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clock_divider_3" PORT="CLK_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="CLK_O" SIGIS="undef" SIGNAME="pwn_divider_0_CLK_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="LD3"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
     </MODULE>
   </MODULES>
 

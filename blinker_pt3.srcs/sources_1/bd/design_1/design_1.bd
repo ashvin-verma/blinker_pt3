@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xADA61E70CFBA849E",
+      "boundary_crc": "0xADA61E70E6FEDACC",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../blinker_pt3.gen/sources_1/bd/design_1",
       "name": "design_1",
@@ -14,8 +14,9 @@
       "clock_divider_0": "",
       "clock_divider_1": "",
       "clock_divider_2": "",
+      "processing_system7_0": "",
       "clock_divider_3": "",
-      "processing_system7_0": ""
+      "pwn_divider_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -314,45 +315,6 @@
         "parameters": {
           "DIVISOR": {
             "value": "0x1DCD650"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "clock_divider",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "CLK_I": {
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "125000000",
-                "value_src": "user_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "default_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "design_1_CLK_IN",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "CLK_O": {
-            "direction": "O"
-          }
-        }
-      },
-      "clock_divider_3": {
-        "vlnv": "xilinx.com:module_ref:clock_divider:1.0",
-        "ip_revision": "1",
-        "xci_name": "design_1_clock_divider_3_0",
-        "xci_path": "ip\\design_1_clock_divider_3_0\\design_1_clock_divider_3_0.xci",
-        "inst_hier_path": "clock_divider_3",
-        "parameters": {
-          "DIVISOR": {
-            "value": "0x0EE6B28"
           }
         },
         "reference_info": {
@@ -2099,6 +2061,70 @@
             }
           }
         }
+      },
+      "clock_divider_3": {
+        "vlnv": "xilinx.com:module_ref:clock_divider:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_clock_divider_3_0",
+        "xci_path": "ip\\design_1_clock_divider_3_0\\design_1_clock_divider_3_0.xci",
+        "inst_hier_path": "clock_divider_3",
+        "parameters": {
+          "DIVISOR": {
+            "value": "0x03B9ACA"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "clock_divider",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "CLK_I": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "default_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_CLK_IN",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "CLK_O": {
+            "direction": "O"
+          }
+        }
+      },
+      "pwn_divider_0": {
+        "vlnv": "xilinx.com:module_ref:pwn_divider:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_pwn_divider_0_1",
+        "xci_path": "ip\\design_1_pwn_divider_0_1\\design_1_pwn_divider_0_1.xci",
+        "inst_hier_path": "pwn_divider_0",
+        "parameters": {
+          "DIVISOR": {
+            "value": "0x0000002"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pwn_divider",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "CLK_I": {
+            "direction": "I"
+          },
+          "CLK_O": {
+            "direction": "O"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -2146,13 +2172,19 @@
       "clock_divider_3_CLK_O": {
         "ports": [
           "clock_divider_3/CLK_O",
-          "LD3"
+          "pwn_divider_0/CLK_I"
         ]
       },
       "processing_system7_0_FCLK_CLK0": {
         "ports": [
           "processing_system7_0/FCLK_CLK0",
           "processing_system7_0/M_AXI_GP0_ACLK"
+        ]
+      },
+      "pwn_divider_0_CLK_O": {
+        "ports": [
+          "pwn_divider_0/CLK_O",
+          "LD3"
         ]
       }
     }
