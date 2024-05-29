@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "pwn_divider,Vivado 2023.2" *)
 (* CHECK_LICENSE_TYPE = "design_1_pwn_divider_0_1,pwn_divider,{}" *)
-(* CORE_GENERATION_INFO = "design_1_pwn_divider_0_1,pwn_divider,{x_ipProduct=Vivado 2023.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=pwn_divider,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,DIVISOR=0x0000002}" *)
+(* CORE_GENERATION_INFO = "design_1_pwn_divider_0_1,pwn_divider,{x_ipProduct=Vivado 2023.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=pwn_divider,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,DIVISOR=0x0000008}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_pwn_divider_0_1 (
@@ -64,7 +64,7 @@ input wire CLK_I;
 output wire CLK_O;
 
   pwn_divider #(
-    .DIVISOR(28'H0000002)
+    .DIVISOR(28'H0000008)
   ) inst (
     .CLK_I(CLK_I),
     .CLK_O(CLK_O)

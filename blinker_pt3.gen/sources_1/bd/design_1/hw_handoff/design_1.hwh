@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed May 29 13:50:51 2024" VIVADOVERSION="2023.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed May 29 15:16:38 2024" VIVADOVERSION="2023.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -1503,7 +1503,7 @@
     <MODULE COREREVISION="1" FULLNAME="/pwn_divider_0" HWVERSION="1.0" INSTANCE="pwn_divider_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="pwn_divider" VLNV="xilinx.com:module_ref:pwn_divider:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="DIVISOR" VALUE="0x0000002"/>
+        <PARAMETER NAME="DIVISOR" VALUE="0x0000008"/>
         <PARAMETER NAME="Component_Name" VALUE="design_1_pwn_divider_0_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>

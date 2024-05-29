@@ -4,8 +4,8 @@
 // Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
 // Date        : Wed May 29 14:25:43 2024
 // Host        : ashvin-ve running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               d:/ashvi/fpga/blinker_pt3/blinker_pt3.gen/sources_1/bd/design_1/ip/design_1_pwn_divider_0_1/design_1_pwn_divider_0_1_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
+//               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_pwn_divider_0_1_sim_netlist.v
 // Design      : design_1_pwn_divider_0_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -16,7 +16,7 @@
 (* CHECK_LICENSE_TYPE = "design_1_pwn_divider_0_1,pwn_divider,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "module_ref" *) 
 (* X_CORE_INFO = "pwn_divider,Vivado 2023.2" *) 
 (* NotValidForBitStream *)
-module design_1_pwn_divider_0_1
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
    (CLK_I,
     CLK_O);
   input CLK_I;
@@ -25,13 +25,12 @@ module design_1_pwn_divider_0_1
   wire CLK_I;
   wire CLK_O;
 
-  design_1_pwn_divider_0_1_pwn_divider inst
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_pwn_divider inst
        (.CLK_I(CLK_I),
         .CLK_O(CLK_O));
 endmodule
 
-(* ORIG_REF_NAME = "pwn_divider" *) 
-module design_1_pwn_divider_0_1_pwn_divider
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_pwn_divider
    (CLK_O,
     CLK_I);
   output CLK_O;

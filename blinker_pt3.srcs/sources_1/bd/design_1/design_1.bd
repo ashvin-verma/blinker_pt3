@@ -2109,7 +2109,7 @@
         "inst_hier_path": "pwn_divider_0",
         "parameters": {
           "DIVISOR": {
-            "value": "0x0000002"
+            "value": "0x0000008"
           }
         },
         "reference_info": {

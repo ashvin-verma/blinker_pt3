@@ -63,7 +63,7 @@ input wire CLK_I;
 output wire CLK_O;
 
   pwn_divider #(
-    .DIVISOR(28'H0000002)
+    .DIVISOR(28'H0000008)
   ) inst (
     .CLK_I(CLK_I),
     .CLK_O(CLK_O)

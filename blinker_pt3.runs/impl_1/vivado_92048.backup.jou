@@ -3,12 +3,12 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Wed May 29 15:17:07 2024
-# Process ID: 60068
-# Current directory: D:/ashvi/fpga/blinker_pt3/blinker_pt3.runs/synth_1
-# Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
-# Log file: D:/ashvi/fpga/blinker_pt3/blinker_pt3.runs/synth_1/design_1_wrapper.vds
-# Journal file: D:/ashvi/fpga/blinker_pt3/blinker_pt3.runs/synth_1\vivado.jou
+# Start of session at: Wed May 29 15:18:36 2024
+# Process ID: 92048
+# Current directory: D:/ashvi/fpga/blinker_pt3/blinker_pt3.runs/impl_1
+# Command line: vivado.exe -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
+# Log file: D:/ashvi/fpga/blinker_pt3/blinker_pt3.runs/impl_1/design_1_wrapper.vdi
+# Journal file: D:/ashvi/fpga/blinker_pt3/blinker_pt3.runs/impl_1\vivado.jou
 # Running On: ashvin-ve, OS: Windows, CPU Frequency: 2208 MHz, CPU Physical cores: 6, Host memory: 25604 MB
 #-----------------------------------------------------------
 source design_1_wrapper.tcl -notrace
